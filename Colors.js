@@ -1,4 +1,4 @@
-function colors() {
+var color_func = `function colors() {
 
 var x = document.querySelectorAll("*");
 
@@ -12,4 +12,10 @@ for(var i=0;i<x.length;i++) {
     }
   }
 }
-colors();
+colors();`;
+
+var head = document.head;
+var script = document.createElement("script");
+script.type = "text/javascript";
+script.appendChild(document.createTextNode(color_func));
+head.appendChild(script);
